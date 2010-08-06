@@ -251,7 +251,7 @@ public:
 
         log(1) << "filesize: " << fileSize << endl;
         ProgressMeter pm( fileSize );
-        const int BUF_SIZE = 1024 * 1024 * 4;
+        const int BUF_SIZE = 1024 * 1024 * 16;
         boost::scoped_array<char> line(new char[BUF_SIZE+2]);
         char * buf = line.get();
         while ( _jsonArray || in->rdstate() == 0 ){
